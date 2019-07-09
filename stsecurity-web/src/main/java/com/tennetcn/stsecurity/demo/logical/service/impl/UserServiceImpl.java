@@ -12,12 +12,13 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public User getUserInfo(User user) {
-        return null;
+        user = new User();
+        return user.setUsername("chenghuan").setPassword("chenghuan");
     }
 
     @Override
     public User loadUserByUsername(String s) {
-        return null;
+        return getUserInfo(null);
     }
 
     @Override

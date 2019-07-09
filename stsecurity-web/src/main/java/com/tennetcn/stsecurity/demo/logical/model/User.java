@@ -1,6 +1,7 @@
 package com.tennetcn.stsecurity.demo.logical.model;
 
-import lombok.Data;
+import lombok.*;
+import lombok.experimental.Accessors;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -10,6 +11,9 @@ import java.util.Date;
 import java.util.List;
 
 @Data
+@Accessors(chain = true)
+@AllArgsConstructor
+@NoArgsConstructor
 public class User implements UserDetails, Serializable {
     private String id;
 
